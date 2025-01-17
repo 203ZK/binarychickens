@@ -1,0 +1,11 @@
+GET http://localhost:3000/api/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Mw.2wg13O5DHwM2jAhpoR7wLSSNiScwxH-Az_9D44DExB8
+
+###
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "username": "Ben Dover",
+    "password": "BobAllen123"
+}

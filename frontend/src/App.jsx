@@ -1,19 +1,17 @@
-import { useState } from 'react'
-import axios from "axios"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Dashboard from './components/Dashboard';
+import Mart from "./components/Mart";
 
 function App() {
-  axios.get("http://localhost:3000")
-    .then((response) => console.log(response.data.users));
-
   return (
-    <>
-      <nav>
-        <span>MUHAMMADIYAH WELFARE HOME</span>
-      </nav>
-
-      <div>well Done!</div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/:userId" element={<Dashboard />}></Route>
+        <Route path="/:userId/mart" element={<Mart />}></Route> 
+      </Routes>
+    </Router>
   );
 }
 
-export default App
+export default App;
